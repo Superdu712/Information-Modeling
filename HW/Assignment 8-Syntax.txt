@@ -1,0 +1,30 @@
+BNF of UK post-code
+
+       <postcode> ::= <outward-code> <space> <inward-code>
+   <outward-code> ::= <pattern1> | <pattern2> | <pattern3> | <pattern4> | <pattern5> | <patter6> 
+       <pattern1> ::= <district1> <letter1>
+       <pattern2> ::= <district2> <letter2>
+       <pattern3> ::= <letter3> <digit> | <letter3> <digit> <digit1>
+       <pattern4> ::= <area1> <digit>
+       <pattern5> ::= <area2> <digit> <digit1>
+       <pattern6> ::= <area3> <digit1> | <area3> <digit> <digit1> | <area4> <digit1>
+    <inward-code> ::= <postcode-sector> <postcode-unit>
+<postcode-sector> ::= <digit1>
+  <postcode-unit> ::= <letter4> <letter4>
+	  <space> ::= “ “
+	<letter1> ::= A | B | E | H | M | N | P | R | V | W | X | Y
+	<letter2> ::= A | B | C | D | E | F | G | H | J | K | P | S | T | U | W 
+        <letter3> ::= AL | B | BA | BB | BD | BH | BN | BT | CA | CB | CF | CH | CO | CT | CV | CW | DA | DD | DE | DG | DH | DL | DN | DT | DY | E | EC |EH | EN | EX | FK | G | GL | GU | HP | HU | IG | IP | IV | KA | KT | KW | KY | L | LA | LE | LN | LS | LU | M | ME | MK | ML | N | NE | NG | NN | NP | NR | OL | OX | PA | PE | PH | PL | PO | RG | RH | RM | S | SA | SE | SK | SN | SP | ST | SW | SY | TA | TD | TF | TN | TQ | TR | TS | TW | UB | W | WA | WC | WD | WF | WR | WS | WV | YO | GY | IM
+        <letter4> ::= A | B | D | E | F | G | H | J | L | N | P | Q | R | S | T | U | W | X | Y | Z
+          <digit> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+         <digit1> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+      <district1> ::= EC1 | EC2 | EC3 | EC4 | SW1 | WC1 | WC2 | NW1 | SE1
+      <district2> ::= W1 | E1 | N1
+      <district3> ::= EC
+	  <area1> ::= BR | HD | HG | HR | HS | HX | JE | LD | SM | SR | WC | WN | ZE
+	  <area2> ::= AB | LL | SO
+	  <area3> ::= BL | BS | CM | CR | PR | SL | SS
+	  <area4> ::= FY | HA 
+
+
+
