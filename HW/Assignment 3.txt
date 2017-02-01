@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+org:Organization rdf:type rdfs:Class ;
+   rdfs:subClassOf foaf:Agent .
+
+foaf:Person rdfs:subClassOf foaf:Agent .
+ 
+:Course rdf:type rdfs:Class .
+
+:Student rdf:type foaf:Person .
+
+:Department rdf:type org:Organization .
+
+:Instructor rdf:type foaf:Person .
+
+:Enrollment rdf:type rdfs:Class ;
+   rdfs:subClassOf event:Event .
+
+:Class rdf:type :Enrollment ;           
+    :Enrolls :Student ;
+    :Offered_by :Department ;
+    :Teaches_by :Instructor ;
+    :Includes :Course .
